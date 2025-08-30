@@ -9,35 +9,44 @@ export default function Header() {
     return (
 
 
-        <header className={styles.teste}>
+        <header className={styles.headerWrapper}>
+            <div className={styles.headerContent}>
+                <div className={styles.logoContainer}>
+                    <Image
+                        src="/header/logo.svg"
+                        alt="Logo TheBox"
+                        width={38}
+                        height={48}
+                    />
+                    <Link href="/" aria-label="TheBox Home" className={styles.logoText}>
+                        The Box
+                    </Link>
 
-            <div>
-                <Image
-                    src="/header/logo.svg"
-                    alt="Logo TheBox"
-                    width={38}
-                    height={48}
-                />
-                <Link href="/" aria-label="TheBox Home">
-                    TheBox
-                </Link>
+                </div>
+
+                <nav className={styles.navWrapper}>
+                    <ul className={styles.navList}>
+                        <li className={styles.navItem}  >
+                            <Link href="/" aria-label="Home"  className={styles.navItemLink}> Home</Link>
+                        </li>
+                        <li className={styles.navItem}>
+                            <Link href="about-us" aria-label="About us section"  className={styles.navItemLink}> About Us</Link>
+                        </li>
+                        <li     className={styles.navItem}>
+                            <Link href="#contact" aria-label="Projects"  className={styles.navItemLink}> Projects</Link>
+                        </li>
+                        <li className={styles.navItem}>
+                            <Link href="#Services" aria-label="Services" className={styles.navItemLink}> Services</Link>
+                        </li>
+
+                        <li  className={styles.navItem}>
+                            <Link   href="Contact Us" aria-label="Contact Us"  className={styles.navItemLink}>  Contact Us</Link>
+                        </li>
+                    </ul>
+
+                </nav>
 
             </div>
-
-            <nav>
-                <ul>
-                    <li>
-                        <Link href="#about" aria-label="About section"> About</Link>
-                    </li>
-                    <li>
-                        <Link href="#services" aria-label="Services section"> Services</Link>
-                    </li>
-                    <li>
-                        <Link href="#contact" aria-label="Contact section"> Contact</Link>
-                    </li>
-                </ul>
-                
-            </nav>
         </header>
     )
 
