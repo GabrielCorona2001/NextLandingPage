@@ -30,17 +30,17 @@ export default function Header() {
                             <Link href="/" aria-label="Home"  className={styles.navItemLink}> Home</Link>
                         </li>
                         <li className={styles.navItem}>
-                            <Link href="about-us" aria-label="About us section"  className={styles.navItemLink}> About Us</Link>
+                            <Link href="/about-us" aria-label="About us section"  className={styles.navItemLink}> About Us</Link>
                         </li>
                         <li     className={styles.navItem}>
-                            <Link href="#contact" aria-label="Projects"  className={styles.navItemLink}> Projects</Link>
+                            <Link href="/contact" aria-label="Projects"  className={styles.navItemLink}> Projects</Link>
                         </li>
                         <li className={styles.navItem}>
-                            <Link href="#Services" aria-label="Services" className={styles.navItemLink}> Services</Link>
+                            <Link href="/Services" aria-label="Services" className={styles.navItemLink}> Services</Link>
                         </li>
 
                         <li  className={styles.navItem}>
-                            <Link   href="Contact Us" aria-label="Contact Us"  className={styles.navItemLink}>  Contact Us</Link>
+                            <Link   href="/Contact Us" aria-label="Contact Us"  className={styles.navItemLink}>  Contact Us</Link>
                         </li>
                     </ul>
 
