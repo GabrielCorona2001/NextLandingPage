@@ -1,0 +1,72 @@
+@import "../../variables.module.scss";
+
+
+
+.sectionAboutUsWrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 4rem auto;
+  position: relative;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
+}
+
+.aboutUsImage {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.aboutUsContent {
+  background-color: $primary-color;
+  color: $white-01;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  max-width: 400px;
+  position: absolute;
+  right: 0;
+  transform: translateX(50%);
+  top: 50%;
+  transform: translate(50%, -50%);
+  z-index: 10;
+
+  @media (max-width: 768px) {
+    position: static;
+    transform: none;
+    margin-top: -2rem;
+    max-width: 90%;
+  }
+}
+
+.aboutUsTitle {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.aboutUsDescription {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.aboutUsLink {
+  display: inline-block;
+  background-color: $white-01;
+  color: $primary-color;
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.3s ease;
+
+  &:hover {
+    background-color: $white-01;
+  }
+}
