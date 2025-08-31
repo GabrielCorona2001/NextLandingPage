@@ -1,14 +1,16 @@
 
 import type { Card } from "../../lib/types";
-
 import Image from "next/image";
+
+import styles from './Cards.module.scss';
+
 
 
 
 
 export function CardComponent({ title, description, icon }: Card) {
     return <>
-        <div>
+        <div className={styles.cardComponentWrapper}>
             <Image
                 src={icon}
                 alt={title}
@@ -17,8 +19,8 @@ export function CardComponent({ title, description, icon }: Card) {
                 unoptimized
 
             />
-            <h3>{title}</h3>
-            <p>{description}</p>
+            <h3 className={styles.cardTitle}>{title}</h3>
+            <p className={styles.cardDescription}>{description}</p>
         </div>
     </>
 
