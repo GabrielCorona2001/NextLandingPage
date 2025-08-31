@@ -1,9 +1,12 @@
-import styles from "./page.module.scss";
+import { Main } from "next/document";
+import MainBanner from "./ui/mainBanner/MainBanner";
 
 export default function Home() {
   return (
-    <div className={styles.page}>
-    testado
-    </div>
+
+    <>
+    <MainBanner />
+    
+    </>
   );
 }
