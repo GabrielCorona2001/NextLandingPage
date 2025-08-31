@@ -1,0 +1,51 @@
+@import "../../variables.module.scss";
+
+
+.mainBannerWrapper {
+
+    width: 100%;
+
+    position: relative;
+}
+
+.BannerImage {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.bannerContent {
+position: absolute;
+right: 0;
+bottom: 0;
+background-color: $primary-color;
+width: 16vw;
+height: 16vh;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: space-between;
+padding: 2vh 0 0 0;
+min-height: 120px;
+}
+
+.buttonWrapper {
+    width: 100%;
+    background-color: $black-01;
+    justify-content: space-evenly;
+    display: flex;
+    padding: 16px 0;
+}
+
+.button {
+    background-color: transparent;
+    border: none;
+    color: $white-01;
+
+    &:hover {
+        cursor: pointer;
+        text-decoration: underline;
+        font-weight: 700;
+        transition: 0.3s;
+    }
+}
