@@ -33,7 +33,7 @@ export function Form() {
             newErrors.reasonForContact = "Selecione um motivo de contato.";
         }
 
-        if(!formData.message.trim()) {
+        if (!formData.message.trim()) {
             newErrors.message = "A mensagem é obrigatória.";
         }
 
@@ -42,13 +42,26 @@ export function Form() {
         return Object.keys(newErrors).length === 0;
     };
 
-    const handleSubmit = (e: React.FormEvent) => {
+    const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
 
-        if (validateForm()) {
-            console.log("Formulário válido, dados:", formData);
-        } else {
-            console.log("Formulário inválido, corrigir erros.");
+        if (!validateForm()) return;
+
+
+        try {
+            const response = await fetch("/api/email", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify(formData),
+            });
+
+            const result = await response.json();
+            if (result.success) {
+            } 
+        } catch (error) {
+            console.log(error);
         }
     };
 
